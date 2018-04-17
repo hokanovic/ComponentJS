@@ -7,6 +7,11 @@
 //Distans: Varaktighet km
 //Puls: Över/Under ___ slag/min'
 
-type StepType = {
-    Text: String,
+export type StepType = {
+    kind: string
+    unit: string // 'puls' | 'foo' | 'bar
+    value: number
 }
+
+
+
