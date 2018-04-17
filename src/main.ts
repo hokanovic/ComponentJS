@@ -4,8 +4,8 @@ let app = angular.module('awesomeApp', []);
 
 app.controller('awesomeAppController', function TodoCtrl($scope) {
     $scope.todos = [
-        {text:'Learn AngularJS', done:false},         
-        {text: 'Build an app', done:false}
+        //{text:'', done:false},         
+        //{text:'', done:false}
       ];
        
     $scope.getTotalTodos = function () {

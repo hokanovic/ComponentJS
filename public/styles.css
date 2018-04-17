@@ -7,3 +7,7 @@
 body {
   background: #13756D;
 }
+
+ng-cloak {
+  display:none;
+}
