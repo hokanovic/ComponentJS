@@ -1,20 +1,31 @@
 import {IModule, IAugmentedJQuery} from 'angular';
 
-import {Todo} from './types';
+import {StepType} from './types';
 
 export default function registerTodoComponent(app: IModule){
   app.component('todo', {
     controllerAs: 'c',
     template: `
+
+
+
+
+
+    
       <ul>
         <li ng-repeat="todo in c.todos track by $index">
           <label ng-class="{done: todo.complete}">
             <input type="checkbox" ng-model="todo.complete">
-            {{todo.text}}
+            {{todo.kind}}
           </label>
           <button ng-click="c.delete($index)">delete</button>
         </li>
       </ul>
+
+
+
+
+
       <form ng-submit="c.submit($event)">
         <input id="field" placeholder="What to do?" autofocus>
         <button type="submit">Add</button>
@@ -26,13 +37,12 @@ export default function registerTodoComponent(app: IModule){
       </button>
     `,
     controller: class TodoComponent {
-      todos: Todo[]
+      todos: StepType[]
       field: HTMLInputElement;
       constructor($element: IAugmentedJQuery){
         this.field = $element[0].querySelector("#field");
         this.todos = [
-          {text: "Take out trash", complete: false},
-          {text: "Do the dishes", complete: false}
+            { kind: "Löpning", unit: "puls", value: "153"}
         ];
       }
       delete(n: number){
@@ -42,10 +52,9 @@ export default function registerTodoComponent(app: IModule){
       submit(e: Event){
         e.preventDefault();
         if (this.field.value){
-          this.todos.push({
-            text: this.field.value,
-            complete: false
-          });
+          this.todos.push(
+            { kind: "Löpning", unit: "puls", value: "153"}
+          );
           this.field.value = "";
           this.field.focus();
         }

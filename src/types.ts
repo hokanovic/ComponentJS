@@ -10,7 +10,7 @@
 export type StepType = {
     kind: string
     unit: string // 'puls' | 'foo' | 'bar
-    value: number
+    value: string
 }
 
 
