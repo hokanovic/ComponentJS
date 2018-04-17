@@ -30,14 +30,12 @@
             <option value="Nedvarvning">Nedvarning</option>
           </optgroup>
         </select>
-<<<<<<< HEAD
        
 </div>
 
 
   <div class="wrapper" ng-app="awesomeApp" ng-controller="awesomeAppController">
         <h2>You've got <span class="emphasis">{{getTotalTodos()}}</span> things to do</h2>
-=======
         <select class="form-control">
             <optgroup label="Välj varaktighet">
               <option value="Tid">Tid</option>
@@ -69,7 +67,6 @@
       <div class="wrapper" ng-app="awesomeApp" ng-controller="awesomeAppController">
         <h2>You've got
           <span class="emphasis">{{getTotalTodos()}}</span> things to do</h2>
->>>>>>> 88a75590e11167c8a3f4e1297b79afcc44eae3e9
         <ul>
           <li ng-repeat="todo in todos">
             <input type="checkbox" ng-model="todo.done" />
@@ -77,21 +74,12 @@
           </li>
         </ul>
         <form>
-<<<<<<< HEAD
           <input class="add-input" type="text" ng-model="formTodoText" ng-model-instant />
           <button class="add-btn" ng-click="addTodo()">Add</button>
 
         
         <button class="clear-btn" ng-click="clearCompleted()">Clear all</button>
       </form>
-=======
-          <input class="add-input" placeholder="I need to..." type="text" ng-model="formTodoText" ng-model-instant />
-          <button class="add-btn" ng-click="addTodo()">
-            <h2>Add</h2>
-          </button>
-        </form>
-        <button class="clear-btn" ng-click="clearCompleted()">Clear completed</button>
->>>>>>> 88a75590e11167c8a3f4e1297b79afcc44eae3e9
       </div>
       <script src="bootstrap.js"></script>
       <script src="bundle.js"></script>
