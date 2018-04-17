@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,44 +8,93 @@
   <link rel="stylesheet" href="styles.css">
   <title>My awesome app</title>
   <link rel="stylesheet" href="bootstrap.css">
+
+
 </head>
+
 <body>
   <div class="wrapper" ng-app="awesomeApp" ng-controller="awesomeAppController" ng-cloak>
 
-  <div class="alert alert-info" role="alert">
-      <select>
+
+
+    <div class="alert alert-success" role="alert">
+      <h4 class="alert-heading">Repetera 2 gånger!</h4>
+      <hr>
+      <div class="alert alert-info alert-dismissible fade show" role="alert">
+        <select class="form-control">
           <optgroup label="Välj typ av steg">
-          <option value="Uppvärmning">Uppvärmning</option>
-          <option value="Löpning">Löpning</option>
-          <option value="Återhämtning">Återhämtning</option>
-          <option value="Vila">Vila</option>
-          <option value="Nedvarvning">Nedvarning</option>
-        </optgroup>
+            <option value="Uppvärmning">Uppvärmning</option>
+            <option value="Löpning">Löpning</option>
+            <option value="Återhämtning">Återhämtning</option>
+            <option value="Vila">Vila</option>
+            <option value="Nedvarvning">Nedvarning</option>
+          </optgroup>
         </select>
+<<<<<<< HEAD
        
 </div>
 
 
   <div class="wrapper" ng-app="awesomeApp" ng-controller="awesomeAppController">
         <h2>You've got <span class="emphasis">{{getTotalTodos()}}</span> things to do</h2>
+=======
+        <select class="form-control">
+            <optgroup label="Välj varaktighet">
+              <option value="Tid">Tid</option>
+              <option value="Distans">Distans</option>
+              <option value="Puls">Puls</option>
+            </optgroup>
+          </select>
+         
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+
+        <input type="text" class="form-control" id="textDepending">
+
+      </div>
+
+      <div id="myAlert" class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+
+
+
+
+
+      <div class="wrapper" ng-app="awesomeApp" ng-controller="awesomeAppController">
+        <h2>You've got
+          <span class="emphasis">{{getTotalTodos()}}</span> things to do</h2>
+>>>>>>> 88a75590e11167c8a3f4e1297b79afcc44eae3e9
         <ul>
           <li ng-repeat="todo in todos">
-            <input type="checkbox" ng-model="todo.done"/>
+            <input type="checkbox" ng-model="todo.done" />
             <span class="done-{{todo.done}}">{{todo.text}}</span>
           </li>
         </ul>
         <form>
+<<<<<<< HEAD
           <input class="add-input" type="text" ng-model="formTodoText" ng-model-instant />
           <button class="add-btn" ng-click="addTodo()">Add</button>
 
         
         <button class="clear-btn" ng-click="clearCompleted()">Clear all</button>
       </form>
+=======
+          <input class="add-input" placeholder="I need to..." type="text" ng-model="formTodoText" ng-model-instant />
+          <button class="add-btn" ng-click="addTodo()">
+            <h2>Add</h2>
+          </button>
+        </form>
+        <button class="clear-btn" ng-click="clearCompleted()">Clear completed</button>
+>>>>>>> 88a75590e11167c8a3f4e1297b79afcc44eae3e9
       </div>
-    
-  <script src="bundle.js"></script>
+      <script src="bootstrap.js"></script>
+      <script src="bundle.js"></script>
 </body>
+
 </html>
-
-
-
