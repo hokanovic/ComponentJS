@@ -1,0 +1,27 @@
+{
+  "name": "my-awesome-app",
+  "version": "1.0.0",
+  "description": "it is awesome",
+  "scripts": {
+    "bundle": "webpack",
+    "setupdist": "node setupdist",
+    "build": "npm run setupdist && npm run bundle",
+    "start:dev": "npm run setupdist && webpack-dev-server"
+  },
+  "author": "Tuffvid",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.9"
+  },
+  "devDependencies": {
+    "@types/angular": "^1.6.43",
+    "fs-extra": "^5.0.0",
+    "less": "^3.0.1",
+    "ts-loader": "^4.0.1",
+    "typescript": "^2.7.2",
+    "webpack": "^4.1.1",
+    "webpack-cli": "2.0.12",
+    "webpack-dev-server": "^3.1.1",
+    "webpack-notifier": "^1.6.0"
+  }
+}

@@ -1,0 +1,1 @@
+An AngularJS-TypeScript-Webpack starter pack for Academy Java spring 2018
